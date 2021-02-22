@@ -1495,7 +1495,14 @@ static lv_obj_t * get_dragged_obj(lv_obj_t * obj)
     if(obj == NULL) return NULL;
     lv_obj_t * drag_obj = obj;
     while(lv_obj_get_drag_parent(drag_obj) != false && drag_obj != NULL) {
-        drag_obj = lv_obj_get_parent(drag_obj);
+        // if (obj->drag_parent_obj != NULL)
+        // {
+        //     drag_obj = obj->drag_parent_obj;
+        // }
+        // else
+        // {
+            drag_obj = lv_obj_get_parent(drag_obj);
+        // }
     }
 
     return drag_obj;

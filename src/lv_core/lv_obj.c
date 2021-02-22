@@ -379,7 +379,7 @@ lv_obj_t * lv_obj_create(lv_obj_t * parent, const lv_obj_t * copy)
     new_obj->gesture_parent = parent ? 1 : 0;
     new_obj->focus_parent  = 0;
     new_obj->state = LV_STATE_DEFAULT;
-
+    new_obj->drag_parent_obj = NULL;
     new_obj->ext_attr = NULL;
 
     lv_style_list_init(&new_obj->style_list);
